@@ -1,16 +1,20 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101b25">
-<meta name="description" content="YES — قريبًا">
-<title>YES — قريبًا</title>
-<style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{min-height:100svh;background:#101b25;color:#f8f5eb;font-family:Tahoma,Arial,sans-serif;display:grid;place-items:center;padding:24px;background-image:radial-gradient(ellipse at 50% 120%,#36545c 0,transparent 65%)}main{text-align:center;width:min(100%,760px);padding:72px 24px}.eyebrow{font-size:13px;letter-spacing:.2em;color:#b8c7c7;direction:ltr}h1{font-family:Arial,sans-serif;font-size:clamp(88px,22vw,180px);line-height:1;letter-spacing:-.065em;margin:30px 0 36px;font-weight:800;direction:ltr}.rule{width:44px;height:2px;background:#d8ba83;margin:0 auto 32px}h2{font-size:clamp(24px,5vw,36px);font-weight:400;margin:0 0 16px}p{color:#bdcaca;font-size:16px;line-height:1.9;margin:0}footer{margin-top:72px;color:#82999b;font-size:12px;letter-spacing:.14em;direction:ltr}@media(prefers-reduced-motion:no-preference){main{animation:appear .8s ease-out both}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}}
-</style>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#063e32"><meta name="description" content="yes.sa — قبل ما تصدّق، تحقّق. الواجهة المعتمدة متاحة، وخدمة التحقق المباشر قيد التفعيل."><link rel="canonical" href="https://yes.sa/"><meta name="yes-release" content="design-preview-20261001"><title>yes.sa — قبل ما تصدّق، تحقّق</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head>
 <body>
-<main><div class="eyebrow">YES.SA</div><h1>YES</h1><div class="rule" aria-hidden="true"></div><h2>قريبًا</h2><p>نعمل على تجهيز الصفحة الجديدة.</p><footer>YES.SA</footer></main>
-</body>
-</html>
+<a class="skip" href="#claim">انتقل إلى التحقق</a>
+<header><a class="brand" href="./" aria-label="yes.sa الرئيسية" dir="ltr">yes<span>.sa</span><i aria-hidden="true">✓</i></a><button class="plain" data-panel="method">كيف نتحقّق؟ <span aria-hidden="true">↗</span></button></header>
+<main>
+<section class="hero"><div class="eyebrow"><span></span> مساحة أوضح للمعلومة</div><h1>قبل ما تصدّق،<br><em>تحقّق.</em></h1><p class="intro">بين الخبر والحقيقة، خطوة.<br>ضع الادعاء هنا، وافهم ما تقوله الأدلة.</p><div class="decor" aria-hidden="true"><div class="orbit"></div><div class="tick">✓</div><span>الدليل أولًا</span></div></section>
+<section class="workspace" aria-label="التحقق من ادعاء">
+<div class="mode"><span>معاينة تفاعلية</span><p>التصميم متاح للمراجعة. خدمة التحقق المباشر قيد التفعيل؛ الأمثلة توضيحية فقط.</p></div>
+<form id="verify"><label for="claim">ما الخبر الذي تريد التحقّق منه؟</label><textarea id="claim" maxlength="4000" rows="3" placeholder="اكتب ادعاءً، أو ألصق نصًا أو رابطًا…" aria-describedby="hint error"></textarea><div class="form-bottom"><p id="hint">ادعاء محدد يعطي نتيجة أوضح.</p><button class="primary" type="submit" id="submit">تحقّق <span aria-hidden="true">←</span></button></div><p id="error" class="error" role="alert" hidden></p></form>
+<div class="examples"><span>استكشف شكل النتيجة:</span><button data-example="confirmed">خبر مؤكد</button><button data-example="misleading">ادعاء مضلل</button><button data-example="false">ادعاء غير صحيح</button><button data-example="insufficient">أدلة غير كافية</button></div>
+</section>
+<section id="result" class="result" tabindex="-1" hidden aria-label="نتيجة المعاينة"></section>
+<section class="principles"><article><span>01</span><h2>الادعاء أولًا</h2><p>نحدد ما يمكن التحقق منه، ونفصل الادعاءات المركبة.</p></article><article><span>02</span><h2>المصادر أمامك</h2><p>الحكم يحتاج دليلًا. اقرأ المصدر والسياق بنفسك.</p></article><article><span>03</span><h2>الوضوح قبل الجزم</h2><p>عندما لا تكفي الأدلة، نقول ذلك بوضوح.</p></article></section>
+<section id="panel" class="panel" hidden tabindex="-1"><button id="close" class="plain">إغلاق ×</button><h2 id="panel-title"></h2><p id="panel-body"></p></section>
+</main>
+<footer><span class="footer-brand" dir="ltr">yes.sa</span><p>الحقيقة تستحق خطوة إضافية.</p><nav aria-label="معلومات الموقع"><button data-panel="method">المنهجية</button><button data-panel="correction">تصحيح نتيجة</button><button data-panel="privacy">الخصوصية</button></nav><small>خدمة التحقق المباشر قيد التفعيل · لا تُعد الأمثلة نتائج تحقق حقيقية</small></footer>
+<div class="sr-only" id="announce" role="status" aria-live="polite"></div>
+</body></html>
